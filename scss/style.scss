@@ -1,0 +1,30 @@
+// Обнуление
+@import "_zero";
+
+//Переменные
+$f: #fff;
+$dark: #222222;
+$orange: #ff9600;
+$blue: #14b9f1;
+$dark-blue: #0c3543;
+
+//Миксин
+@mixin font($ff, $fz, $lh, $fw, $c) {
+  font-family: $ff;
+  font-size: $fz;
+  line-height: $lh;
+  font-weight: $fw;
+  color: $c;
+}
+
+body {
+  font: 16px/1.4 'IBM Plex Sans', sans-serif;
+}
+
+.wrapper {}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
