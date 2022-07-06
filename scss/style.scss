@@ -5,7 +5,8 @@
 $f: #fff;
 $dark: #222222;
 $orange: #ff9600;
-$blue: #14b9f1;
+$light-blue: #14b9f1;
+$blue: #212934;
 $dark-blue: #0c3543;
 
 //Миксин
@@ -17,14 +18,37 @@ $dark-blue: #0c3543;
   color: $c;
 }
 
+html,
 body {
+  height: 100%;
   font: 16px/1.4 'IBM Plex Sans', sans-serif;
+  background: rgb(26, 26, 26);
 }
 
-.wrapper {}
+.wrapper {
+  height: 100%;
+}
 
 .container {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 15px;
 }
+
+.btn {
+  background: $orange;
+  padding: 20px 40px;
+  border-radius: 5px;
+
+  &:hover {
+    background: $light-blue;
+  }
+
+  &__link {
+    color: $f;
+  }
+}
+
+
+//Стили для header
+@import "_header";

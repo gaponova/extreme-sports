@@ -1,0 +1,99 @@
+.header {
+  position: relative;
+
+  &__container {}
+
+  &__body {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    flex: 0 1 225px;
+  }
+
+  &__burger {
+    display: none;
+  }
+}
+
+.bar-fixed {}
+
+.menu {
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    position: relative;
+    margin: 0px 30px 0px 0px;
+
+    body.mouse &:hover .sub-menu__list {
+      display: block;
+    }
+  }
+
+  &__link {
+    color: #fff;
+
+    &.parent {
+      margin-right: 30px;
+    }
+  }
+
+  &__arrow {
+    color: #fff;
+  }
+}
+
+.arrow {
+  display: none;
+  position: absolute;
+  top: 4px;
+  right: 0;
+
+  &.active {
+    transform: rotate(-180deg);
+  }
+
+  body.touch & {
+    display: block;
+  }
+}
+
+.fa-angle-right {
+  color: #fff;
+}
+
+.sub-menu {
+
+  &__list {
+    display: none;
+    // min-width: 200px;
+    width: max-content;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    background: #fff;
+    border-radius: 5px;
+    transition: .3s;
+
+    body.touch &.open {
+      display: block;
+    }
+  }
+
+  &__item {
+    position: relative;
+
+  }
+
+  &__link {
+    display: inline-block;
+    color: $blue;
+    padding: 5px 10px;
+  }
+}
