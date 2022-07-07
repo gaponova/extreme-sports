@@ -186,16 +186,26 @@ body {
   color: #fff;
 }
 
+body.mouse .menu__item:hover .arrow {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
 .arrow {
-  display: none;
   position: absolute;
   top: 4px;
   right: 0;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 .arrow.active {
   -webkit-transform: rotate(-180deg);
           transform: rotate(-180deg);
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 .fa-angle-right {
@@ -203,17 +213,18 @@ body {
 }
 
 .sub-menu__list {
-  display: none;
+  visibility: hidden;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   position: absolute;
-  top: 30px;
+  top: 40px;
   left: 0;
   background: #fff;
   border-radius: 5px;
   -webkit-transition: .3s;
   transition: .3s;
+  opacity: 0;
 }
 
 .sub-menu__item {
@@ -227,11 +238,13 @@ body {
 }
 
 body.mouse .menu__item:hover .sub-menu__list {
-  display: block;
+  visibility: visible;
+  opacity: 1;
 }
 
 body.touch .sub-menu__list.open {
-  display: block;
+  visibility: visible;
+  opacity: 1;
 }
 
 body.touch .arrow {
@@ -336,8 +349,12 @@ body.touch .arrow {
   }
   .sub-menu__list {
     position: relative;
-    top: 0;
-    left: 0;
+    display: none;
+    width: 100%;
+  }
+  body.touch .sub-menu__list.open {
+    display: block;
+    opacity: 1;
   }
 }
 /*# sourceMappingURL=style.css.map */

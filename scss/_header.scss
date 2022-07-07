@@ -77,14 +77,21 @@
   }
 }
 
+body.mouse .menu__item:hover .arrow {
+  transform: rotate(-180deg);
+  transition: .3s;
+}
+
 .arrow {
-  display: none;
+  //display: none;
   position: absolute;
   top: 4px;
   right: 0;
+  transition: .3s;
 
   &.active {
     transform: rotate(-180deg);
+    transition: .3s;
   }
 }
 
@@ -95,15 +102,17 @@
 .sub-menu {
 
   &__list {
-    display: none;
+    // display: none;
     // min-width: 200px;
+    visibility: hidden;
     width: max-content;
     position: absolute;
-    top: 30px;
+    top: 40px;
     left: 0;
     background: #fff;
     border-radius: 5px;
     transition: .3s;
+    opacity: 0;
   }
 
   &__item {
@@ -118,11 +127,15 @@
 }
 
 body.mouse .menu__item:hover .sub-menu__list {
-  display: block;
+  //display: block;
+  visibility: visible;
+  opacity: 1;
 }
 
 body.touch .sub-menu__list.open {
-  display: block;
+  //display: block;
+  visibility: visible;
+  opacity: 1;
 }
 
 body.touch .arrow {
@@ -236,7 +249,14 @@ body.touch .arrow {
 
   .sub-menu__list {
     position: relative;
-    top: 0;
-    left: 0;
+    display: none;
+    width: 100%;
+  }
+
+
+
+  body.touch .sub-menu__list.open {
+    display: block;
+    opacity: 1;
   }
 }
