@@ -38,38 +38,6 @@
   }
 }
 
-.bar-fixed {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 999;
-  animation: fixedMenu 1s forwards;
-  background: rgba(12, 53, 67, 0.7);
-  padding: 0px 0px 0px 0px;
-  transition: 0.5s;
-}
-
-@-webkit-keyframes fixedMenu {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fixedMenu {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
 .logo {
 
   &__link {}
@@ -195,6 +163,29 @@ body.touch .arrow {
 //Стили для бургера
 .header__burger {
   display: none;
+}
+
+//Стили для появления плавающегго меню
+.bar-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  animation: fixedMenu 1s forwards;
+  background: rgba(12, 53, 67, 0.7);
+  padding: 0px 0px 0px 0px;
+  transition: 0.5s;
+}
+
+@keyframes fixedMenu {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 
@@ -348,8 +339,6 @@ body.touch .arrow {
     width: 100%;
     border-radius: 0;
   }
-
-
 
   body.touch .sub-menu__list.open {
     display: block;
