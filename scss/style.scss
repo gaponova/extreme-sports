@@ -8,6 +8,7 @@ $orange: #ff9600;
 $light-blue: #14b9f1;
 $blue: #212934;
 $dark-blue: #0c3543;
+$light-lilac: #f9f9fb;
 
 //Миксин
 @mixin font($ff, $fz, $lh, $fw, $c) {
@@ -30,15 +31,21 @@ body {
 }
 
 .container {
-  max-width: 1400px;
+  max-width: 1370px;
   margin: 0 auto;
   padding: 0 15px;
 }
 
 .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include font ('IBM Plex Sans', 18px, 140%, 700, $f);
+  letter-spacing: 0.5px;
   background: $orange;
-  padding: 20px 40px;
+  padding: 17px 41px;
   border-radius: 5px;
+  transition: .3s;
 
   &:hover {
     background: $light-blue;
@@ -52,3 +59,6 @@ body {
 
 //Стили для header
 @import "_header";
+
+//Стили для секции hero
+@import "_hero";

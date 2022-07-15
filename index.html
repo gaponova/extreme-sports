@@ -31,7 +31,7 @@
 
 <body>
   <div class="wrapper">
-    <header class="header bar-fixed">
+    <header class="header">
       <div class="header__container container">
         <div class="header__body">
           <div class="header__logo logo">
@@ -48,6 +48,7 @@
                 <a class="menu__link" href="#">About Us</a>
               </li>
               <li class="menu__item">
+                <!-- Добавляем ссылке ниже класс "parent", чтобы стрелка была видна на desctop -->
                 <a class="menu__link parent" href="#">Activities</a>
                 <i class="fa-solid fa-angle-down menu__arrow arrow"></i>
                 <ul class="sub-menu__list">
@@ -89,6 +90,11 @@
         </div>
       </div>
     </header>
+    <section class="hero">
+      <div class="hero__container container">
+
+      </div>
+    </section>
     <div class="content">
       <div class="container">
         <p class="content__text">
@@ -115,16 +121,13 @@
       </div>
     </div>
   </div>
-  <section class="hero">
-    <div class="hero__container container">
 
-    </div>
-  </section>
   </div>
 
   <!-- JS ============================================ -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="js/menu-dropdown.js"></script>
+  <script src="js/bar-fix.js"></script>
 </body>
 
 </html>
